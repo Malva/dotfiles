@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 "----------------------------------------------------------------------
-" NeoBundleの設定 {{{
+" NeoBundle {{{
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
