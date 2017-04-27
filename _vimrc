@@ -90,7 +90,7 @@ augroup yajsCmd
 augroup END
 
 " }}} ----------------------------------------------------------------------
-" vim-indent-guides {{{
+" Indent-Guides {{{
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=2
@@ -104,11 +104,11 @@ set encoding=utf-8
 set fileencoding=utf-8
 set autoread
 set showcmd
-" 検索の挙動:
+
 set ignorecase
 set smartcase
 set incsearch
-" 編集に関する設定:
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -124,7 +124,6 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
-"----------------------------------------------------------------------
 set backspace=indent,eol,start
 set wrapscan
 set showmatch
@@ -132,8 +131,6 @@ set wildmenu
 set formatoptions+=mM
 set ambiwidth=double
 
-"----------------------------------------------------------------------
-" GUI固有ではない画面表示の設定:
 set cursorline
 set number
 set ruler
@@ -145,7 +142,6 @@ set cmdheight=2
 set showcmd
 set title
 set splitright
-"colorscheme evening " (Windows用gvim使用時はgvimrcを編集すること)
 
 "----------------------------------------------------------------------
 set t_Co=256
@@ -158,10 +154,10 @@ set swapfile
 " set directory-=.
 set directory=~/.vim/tmp
 " http://vim-jp.org/vim-users-jp/2010/07/19/Hack-162.html
-if has('persistent_undo')
+"if has('persistent_undo')
   set undodir=~/.vim/undo
   set undofile
-endif
+"endif
 
 " }}} ----------------------------------------------------------------------
 " mappings {{{
@@ -185,7 +181,7 @@ nnoremap <Leader>ow
       \        :<C-u>setlocal wrap!
       \       \|     setlocal wrap?<CR>
 
-nnoremap <Leader>oig :<C-u>IndentGuidesToggle<CR>
+"nnoremap <Leader>ig :<C-u>IndentGuidesToggle<CR>
 
 nnoremap j gj
 nnoremap k gk
@@ -219,7 +215,7 @@ augroup highlightIdeographicSpace
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 
-colorscheme molokai
+colorscheme molokai   " gvim使用時はgvimrcを編集すること
 syntax on
 
 "function! ZenkakuSpace()
